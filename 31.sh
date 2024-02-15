@@ -1,6 +1,7 @@
 #!/bin/bash
 
-if [ $# -lt 1 ]; then
+if [ $# -lt 1 ];
+then
     echo "Invalid arguments.."
 else
     echo "Enter a Word :-"

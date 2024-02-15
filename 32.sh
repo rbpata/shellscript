@@ -1,12 +1,11 @@
 #!/bin/bash
 
-echo "Enter File Name :- "
-read file
+# Get the last modified file in the current directory
+last_modified_file=$(ls -t | head -n1)
 
-if [ -f $file ]; then
-
-    echo "File exist and Modification Time is :- ";ls -l $file | cut -c 50-54
-
+# Check if any file exists in the directory
+if [ -n "$last_modified_file" ]; then
+    echo "Last modified file in the current directory: $last_modified_file"
 else
-    echo "File not Exist..."
+    echo "No files found in the current directory."
 fi
