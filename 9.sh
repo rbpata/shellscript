@@ -9,3 +9,9 @@ for file in *; do
         echo "$file is executable"
     fi
 done
+
+for i in *; do
+        if [ -x "$i" ];then
+                echo "$i is executable file..."
+        fi
+done

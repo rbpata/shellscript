@@ -16,3 +16,26 @@ if [ "$total" -eq 0 ]; then
 else
     echo "Both Files are not Same.."
 fi
+
+
+file1=$1
+file2=$2
+
+# Check if both files exist
+if [ ! -f "$file1" ]; then
+    echo "File '$file1' does not exist."
+    exit 1
+fi
+
+if [ ! -f "$file2" ]; then
+    echo "File '$file2' does not exist."
+    exit 1
+fi
+
+# Compare the contents of the two files
+if cmp -s "$file1" "$file2"; then
+    echo "Contents of '$file1' and '$file2' are the same. Deleting '$file2'..."
+    rm "$file2"
+else
+    echo "Contents of '$file1' and '$file2' are different."
+fi

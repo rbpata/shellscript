@@ -12,3 +12,17 @@ for file in *; do
     # Display file information in the specified format
     printf "%-12s %-10s %-16s %-12s %-10s\n" "$file" "$size" "$date" "$protection" "$owner"
 done
+
+#!/bin/bash
+
+# Function to display directory information
+display_directory_info() {
+    echo "File       Size        Date           Permissions  Owner"
+    echo "-------------------------------------------------------"
+    ls -l | awk 'NR > 1 { printf "%-10s %-10s %-14s %-12s %-s\n", $9, $5, $6" "$7, $1, $3 }'
+}
+
+# Main script starts here
+echo "Directory Information:"
+echo
+display_directory_info

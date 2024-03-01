@@ -10,3 +10,14 @@ if [ -e "$file" ]; then
 else
     echo "File or path not found."
 fi
+
+
+echo "Enter a file name"
+read -r file
+
+if [ -e "$file" ]; then
+        path=$(realpath "$file")
+        echo "$path"
+else
+        echo "not found"
+fi

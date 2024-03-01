@@ -1,13 +1,13 @@
 #!/bin/bash
 
-echo "1. Create a file called text and store name, age, and address in it."
-echo "2. Display the contents of the file text on the screen."
-echo "3. Delete the directories mydir and newdir in one shot."
-echo "4. Sort a numeric file."
-echo "5. Change the permissions for the file newtext to 666."
+    echo "1. Create a file called text and store name, age, and address in it."
+    echo "2. Display the contents of the file text on the screen."
+    echo "3. Delete the directories mydir and newdir in one shot."
+    echo "4. Sort a numeric file."
+    echo "5. Change the permissions for the file newtext to 666."
 
-echo -e "ENTER YOUR CHOICE: \c"
-read -r choice
+    echo -e "ENTER YOUR CHOICE: \c"
+    read -r choice
 
 case $choice in
     1) 

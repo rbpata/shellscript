@@ -11,3 +11,15 @@ if [ -d "$filename" ]; then
 else
     echo "File '$filename' is not a directory."
 fi
+
+
+
+filename=$1
+
+# Check if file exists and is a regular file
+if [ -d "$filename" ]; then
+    echo "File is an ordinary file. Displaying contents:"
+    ls "$filename"
+else
+    echo "File does not exist or is not an ordinary file. Cannot display."
+fi

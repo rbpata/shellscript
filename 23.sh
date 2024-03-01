@@ -12,3 +12,13 @@ for file in c*; do
 done
 
 echo "Renaming completed for files starting with 'c'."
+
+for i in c*;do
+        if [ -f "$i" ]; then
+                new="${i}111"
+                mv "$i" "$new"
+                echo "Renamed.."
+        else
+                echo "file not exist.."
+        fi
+done

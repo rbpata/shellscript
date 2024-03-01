@@ -18,3 +18,19 @@ if [ -d "$file1" ];then
 else
     echo "can not find the folder"
 fi
+
+#!/bin/bash
+
+# Display all hidden files in the current directory
+for file in .*; do
+    # Exclude "." and ".." from the output
+    if [ "$file" != "." ] && [ "$file" != ".." ]; then
+        echo "$file"
+    fi
+done
+
+for i in .*;do
+        if [ "$i" != "." ] && [ "$i" != ".." ]; then
+                echo "$i"
+        fi
+done

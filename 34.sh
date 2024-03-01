@@ -39,3 +39,28 @@ if [ $# -eq 1 ]; then
 else
     echo "Invalid number of arguments. Usage: $0 <number>"
 fi
+
+#!/bin/bash
+
+n1=$1
+n2=$2
+n3=$3
+
+if [ "$n2" = "-" ]; then
+    if [ "$n3" -lt "$n1" ]; then
+        echo "Enter valid inputs."
+        exit 1
+    fi
+
+    i=$n1
+    while [ "$i" -lt "$n3" ]; do
+        cal "$i"
+        ((i+=1))
+    done
+elif [ "$n2" = "," ]; then
+    cal "$n1"
+    cal "$n3"
+else
+    echo "Invalid inputs provided."
+    exit 1
+fi

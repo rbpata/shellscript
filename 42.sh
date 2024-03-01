@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define your friend's email address
-friend_email="friend@example.com"
+friend_email="non"
 
 # Check if your friend is currently logged in
 if who | grep -q "^$friend_username"; then

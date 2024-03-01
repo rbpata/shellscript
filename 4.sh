@@ -11,7 +11,11 @@ read -r choice
 case $choice in
     1) 
         echo "Displaying hidden files:"
-        ls -a
+        for i in .*;do
+        if [ "$i" != "." ] && [ "$i" != ".." ]; then
+                echo "$i"
+        fi
+done
         ;;
     2) 
         echo "Deleting a directory with files:"

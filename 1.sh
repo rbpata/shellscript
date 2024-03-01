@@ -63,7 +63,7 @@ chmod 755 somefile.sh
 echo "Pattern matching" > somefile.txt
 grep "Pattern" somefile.txt
 
-# Stream editor for text transformation
+# Stream editor for text transformation to replace the words
 sed 's/Pattern/NewPattern/' somefile.txt
 
 # Display the first few lines of a file
@@ -87,6 +87,8 @@ sort somefile.txt
 
 # Search for files and directories
 find / -name "filename" 2>/dev/null || echo "File not found"
+
+find ~ -name 1.sh || echo "file not found"
 
 # Display manual pages for a command
 man ls
